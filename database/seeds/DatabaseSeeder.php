@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
             'scheme'=>'semanal',
             'notes'=>'Pagara intereses de 5000',
             'type_of_loan'=>'intereses',
-            'status'=>'active',
+            'status'=>'activo',
             'customer_id'=>2,
             'user_id'=>1
         ]);
@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
             'scheme'=>'semanal',
             'notes'=>'Pagara intereses de 5000',
             'type_of_loan'=>'intereses',
-            'status'=>'active',
+            'status'=>'activo',
             'customer_id'=>2,
             'user_id'=>1
         ]);
@@ -102,7 +102,7 @@ class DatabaseSeeder extends Seeder
             'scheme'=>'semanal',
             'notes'=>'Pagara intereses de 5000',
             'type_of_loan'=>'intereses',
-            'status'=>'active',
+            'status'=>'activo',
             'customer_id'=>2,
             'user_id'=>1
         ]);
