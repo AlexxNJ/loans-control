@@ -84,6 +84,28 @@ class DatabaseSeeder extends Seeder
             'customer_id'=>2,
             'user_id'=>1
         ]);
+        Loan::create([
+            'amount'=>10000,
+            'interest_percentage'=>10,
+            'date'=>'2020-11-04',
+            'scheme'=>'semanal',
+            'notes'=>'Pagara intereses de 5000',
+            'type_of_loan'=>'intereses',
+            'status'=>'active',
+            'customer_id'=>2,
+            'user_id'=>1
+        ]);
+        Loan::create([
+            'amount'=>1000,
+            'interest_percentage'=>10,
+            'date'=>'2020-11-04',
+            'scheme'=>'semanal',
+            'notes'=>'Pagara intereses de 5000',
+            'type_of_loan'=>'intereses',
+            'status'=>'active',
+            'customer_id'=>2,
+            'user_id'=>1
+        ]);
 
         Wallet::create([
             'quantity'=>45000,
