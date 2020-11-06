@@ -4,7 +4,7 @@
         <!--begin::Menu Nav-->
         <ul class="menu-nav">
             <li class="menu-item menu-item-active" aria-haspopup="true">
-                <a href="index.html" class="menu-link">
+                <a href="{{ route('home') }}" class="menu-link">
                     <i class="menu-icon fas fa-home"></i>
                     <span class="menu-text">Dashboard</span>
                 </a>
@@ -16,7 +16,7 @@
             </li>
             
             <li class="menu-item" aria-haspopup="true">
-                <a href="#" class="menu-link">
+                <a href="{{ route('customers.index') }}" class="menu-link">
                     <i class="menu-icon fas fa-users"></i>
                     <span class="menu-text">Clientes</span>
                 </a>

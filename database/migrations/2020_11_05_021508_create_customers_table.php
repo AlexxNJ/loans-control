@@ -19,10 +19,9 @@ class CreateCustomersTable extends Migration
             $table->string('phone_number')->nullable();
             $table->string('email')->nullable();
             $table->string('status')->default('activo');
-            $table->integer('group_id')->nullable()->unsigned();
-            $table->foreign('group_id')->references('id')->on('groups');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

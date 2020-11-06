@@ -3,7 +3,6 @@
 use App\Wallet;
 use App\Loan;
 use App\User;
-use App\Group;
 use App\Income;
 use App\Expense;
 use App\Payment;
@@ -24,7 +23,6 @@ class DatabaseSeeder extends Seeder
         Wallet::truncate();
         Customer::truncate();
         Expense::truncate();
-        Group::truncate();
         Income::truncate();
         Loan::truncate();
         Payment::truncate();
@@ -36,21 +34,9 @@ class DatabaseSeeder extends Seeder
             'password'=> bcrypt('secret')
         ]);
 
-        Group::create([
-            'name'=>'Grupo Prestamo papa',
-            'description'=>'Son el grupo de papa',
-            'user_id'=>1
-        ]);
-        Group::create([
-            'name'=>'Grupo Prestamo mama',
-            'description'=>'Son el grupo de mama',
-            'user_id'=>1
-        ]);
-
         Customer::create([
             'name'=>'Yuliana Solano Hernandez',
             'phone_number'=>'7228895761',
-            'group_id'=>1,
             'user_id'=>1
         ]);
         Customer::create([

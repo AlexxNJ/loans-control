@@ -21,6 +21,7 @@ class CreatePaymentsTable extends Migration
             $table->text('notes')->nullable();
             $table->integer('customer_id')->nullable()->unsigned();
             $table->foreign('customer_id')->references('id')->on('customers');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

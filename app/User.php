@@ -2,19 +2,23 @@
 
 namespace App;
 
-use App\Wallet;
 use App\Loan;
 use App\Group;
 use App\Income;
+use App\Wallet;
 use App\Expense;
 use App\Customer;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
 
     protected $fillable = ['name', 'email', 'password',];
 

@@ -60,7 +60,7 @@
                         <h4 class="text-success mt-2 font-weight-bolder">Clientes</h4>
                         <p class="text-success my-6">Total: {{ $totalCustomers }}
                         <br /></p>
-                        <a href="#" class="btn btn-success font-weight-bold py-2 px-6">Más información</a>
+                        <a href="{{ route('customers.index') }}" class="btn btn-success font-weight-bold py-2 px-6">Más información</a>
                     </div>
                 </div>
             </div>
