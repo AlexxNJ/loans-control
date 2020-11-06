@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li class="menu-item" aria-haspopup="true">
-                <a href="#" class="menu-link">
+                <a href="{{ route('wallets.index') }}" class="menu-link">
                     <i class="menu-icon fas fa-wallet"></i>
                     <span class="menu-text">Billetera</span>
                 </a>

@@ -15,7 +15,7 @@
                             <p class="text-inverse-danger my-6">$ {{ $wallet->quantity }} MXN
                             <br /></p>
                         @endforeach
-                        <a href="#" class="btn btn-warning font-weight-bold py-2 px-6">Más información</a>
+                        <a href="{{ route('wallets.index') }}" class="btn btn-warning font-weight-bold py-2 px-6">Más información</a>
                     </div>
                 </div>
             </div>
