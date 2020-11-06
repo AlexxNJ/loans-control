@@ -1411,6 +1411,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('js/pages/widgets.js')}}"></script>
+		<script src="{{ asset('js/pages/crud/forms/widgets/bootstrap-datepicker.js') }}"></script>
 		<!--end::Page Scripts-->
 		@stack('scripts')
 	</body>

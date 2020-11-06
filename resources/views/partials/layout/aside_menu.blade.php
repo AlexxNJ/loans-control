@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="menu-item" aria-haspopup="true">
-                <a href="#" class="menu-link">
+                <a href="{{ route('incomes.index') }}" class="menu-link">
                     <i class="menu-icon fas fa-donate"></i>
                     <span class="menu-text">Ingresos</span>
                 </a>

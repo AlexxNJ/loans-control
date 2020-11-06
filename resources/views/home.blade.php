@@ -88,7 +88,7 @@
                         <h4 class="text-danger mt-2 font-weight-bolder">Ingresos</h4>
                         <p class="text-dark-50 my-6">$ {{ $incomes }} MXN
                         <br /></p>
-                        <a href="#" class="btn btn-danger font-weight-bold py-2 px-6">Más información</a>
+                        <a href="{{ route('incomes.index') }}" class="btn btn-danger font-weight-bold py-2 px-6">Más información</a>
                     </div>
                 </div>
             </div>

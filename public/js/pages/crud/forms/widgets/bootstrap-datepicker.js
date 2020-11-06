@@ -5,7 +5,7 @@ var KTBootstrapDatepicker = function () {
     var arrows;
     if (KTUtil.isRTL()) {
         arrows = {
-            leftArrow: '<i class="la la-angle-right"></i>',
+            leftArrow: '<i class="la la-angle-right"></i>', 
             rightArrow: '<i class="la la-angle-left"></i>'
         }
     } else {
@@ -27,6 +27,12 @@ var KTBootstrapDatepicker = function () {
 
         // minimum setup for modal demo
         $('#kt_datepicker_1_modal').datepicker({
+            rtl: KTUtil.isRTL(),
+            todayHighlight: true,
+            orientation: "bottom left",
+            templates: arrows
+        });
+        $('#c_datepicker').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             orientation: "bottom left",

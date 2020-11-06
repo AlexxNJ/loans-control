@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('customers', 'CustomersController')->name('*','customers');
 Route::resource('wallets', 'WalletsController')->name('*','wallets');
+Route::resource('incomes', 'IncomesController')->name('*','incomes');
