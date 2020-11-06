@@ -74,7 +74,7 @@
                         <h4 class="text-inverse-danger mt-2 font-weight-bolder">Gastos</h4>
                         <p class="text-inverse-danger my-6">$ {{ $expenses }} MXN
                         <br /></p>
-                        <a href="#" class="btn btn-danger font-weight-bold py-2 px-6">Más información</a>
+                        <a href="{{ route('expenses.index') }}" class="btn btn-danger font-weight-bold py-2 px-6">Más información</a>
                     </div>
                 </div>
             </div>
