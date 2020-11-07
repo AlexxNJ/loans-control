@@ -17,7 +17,7 @@
                     <input type="text" class="form-control .c_datepicker" id="c_datepicker" readonly="readonly" value="{{ date('m/d/Y') }}" />
                 </div>
                 <div class="form-group">
-                    <label>Cantidad</label>
+                    <label>Monto</label>
                     <input type="text" class="form-control" id="c_amount"/>
                 </div>
                 <div class="form-group">

@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="menu-item" aria-haspopup="true">
-                <a href="#" class="menu-link">
+                <a href="{{ route('expenses.index') }}" class="menu-link">
                     <i class="menu-icon fas fa-dollar-sign"></i>
                     <span class="menu-text">Gastos</span>
                 </a>

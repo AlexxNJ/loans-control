@@ -14,7 +14,7 @@
                 <input type="hidden" class="form-control" id="wallet_id"/>
                 
                 <div class="form-group">
-                    <label>Cantidad
+                    <label>Monto
                     <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="quantity"/>
                 </div>

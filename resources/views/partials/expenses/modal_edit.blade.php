@@ -18,7 +18,7 @@
                     <input type="text" class="form-control .datepicker" id="kt_datepicker_1_modal" readonly="readonly"/>
                 </div>
                 <div class="form-group">
-                    <label>Cantidad</label>
+                    <label>Monto</label>
                     <input type="text" class="form-control" id="amount"/>
                 </div>
                 <div class="form-group">
