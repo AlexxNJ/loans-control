@@ -148,11 +148,32 @@ var KTSelect2 = function() {
     }
 
     var modalDemos = function() {
+        $('#createLoan').on('shown.bs.modal', function () {
+            $('#select_customer').select2({
+                placeholder: "Selecciona un cliente"
+            });
+        })
+        $('#editLoan').on('shown.bs.modal', function () {
+            $('#edit_select_customer').select2({
+                placeholder: "Selecciona un cliente"
+            });
+        })
+        $('#createLoan').on('shown.bs.modal', function () {
+            $('#select_escheme').select2({
+                placeholder: "Selecciona un esquema"
+            });
+        })
+        $('#editLoan').on('shown.bs.modal', function () {
+            $('#edit_select_escheme').select2({
+                placeholder: "Selecciona un esquema"
+            });
+        })
         $('#kt_select2_modal').on('shown.bs.modal', function () {
             // basic
             $('#kt_select2_1_modal').select2({
                 placeholder: "Select a state"
             });
+
 
             // nested
             $('#kt_select2_2_modal').select2({

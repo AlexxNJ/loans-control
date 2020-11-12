@@ -17,10 +17,12 @@ class CreatePaymentsTable extends Migration
             $table->increments('id');
             $table->date('date');
             $table->double('amount',8,2);
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->text('notes')->nullable();
             $table->integer('customer_id')->nullable()->unsigned();
             $table->foreign('customer_id')->references('id')->on('customers');
+            $table->integer('user_id')->nullable()->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -40,7 +40,7 @@
                 </a>
             </li>
             <li class="menu-item" aria-haspopup="true">
-                <a href="#" class="menu-link">
+                <a href="{{ route('loans.index') }}" class="menu-link">
                     <i class="menu-icon fas fa-hand-holding-usd"></i>
                     <span class="menu-text">Prestamos</span>
                 </a>

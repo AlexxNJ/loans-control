@@ -12,4 +12,4 @@ $('.table-incomes tr td .btn-delete').click(function(){
         }
     })
 
-})
+}) 

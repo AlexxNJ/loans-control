@@ -6,6 +6,7 @@ use App\Loan;
 use App\Income;
 use App\Wallet;
 use App\Expense;
+use App\Payment;
 use App\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -33,14 +34,11 @@ class HomeController extends Controller
         $user = auth()->user();
         $wallets = Wallet::where('user_id',$user_id)->get();
 
-       $loans = Loan::where('user_id',$user_id)->sum('amount');
+       $loans = Loan::where('user_id',$user_id)
+                    ->where('status','activo')
+                    ->sum('amount');
 
-       $payments = Customer::select(DB::raw('SUM(payments.amount) as total'))
-                            ->join('payments','customers.id','=','payments.id')
-                            ->where('user_id',$user_id)
-                            ->get();
-
-        $totalPayments = $payments->pluck('total');
+       $payments = Payment::where('user_id',$user_id)->sum('amount');
 
         $totalCustomers = Customer::where('user_id',$user_id)->count();
 
@@ -48,6 +46,6 @@ class HomeController extends Controller
 
         $incomes = Income::where('user_id',$user_id)->sum('amount');
         
-        return view('home',compact('wallets','loans','totalPayments','totalCustomers','expenses','incomes'));
+        return view('home',compact('wallets','loans','payments','totalCustomers','expenses','incomes'));
     }
 }

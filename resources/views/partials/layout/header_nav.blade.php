@@ -19,7 +19,7 @@
     </a>
 </li>
 <li class="menu-item" data-menu-toggle="click" aria-haspopup="true">
-    <a href="{{ route('home') }}" class="menu-link">
+    <a href="{{ route('loans.index') }}" class="menu-link">
         <span class="menu-text">Prestamos</span>
     </a>
 </li>

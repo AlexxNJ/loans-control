@@ -29,7 +29,7 @@
                         <h4 class="text-inverse-danger mt-2 font-weight-bolder">Prestamos</h4>
                         <p class="text-inverse-danger my-6">$ {{ $loans }} MXN
                         <br /></p>
-                        <a href="#" class="btn btn-warning font-weight-bold py-2 px-6">Más información</a>
+                        <a href="{{ route('loans.index') }}" class="btn btn-warning font-weight-bold py-2 px-6">Más información</a>
                     </div>
                 </div>
             </div>
@@ -41,10 +41,8 @@
                 <div class="card-body d-flex p-0">
                     <div class="flex-grow-1 bg-info p-8 card-rounded flex-grow-1 bgi-no-repeat" style="background-position: calc(100% + 0.5rem) bottom; background-size: auto 70%; background-image: url({{ asset('media/svg/loans/pagos.svg') }})">
                         <h4 class="text-inverse-danger mt-2 font-weight-bolder">Pagos</h4>
-                        @foreach ($totalPayments as $payment)
-                            <p class="text-inverse-danger my-6">$ {{ $payment }} MXN
+                            <p class="text-inverse-danger my-6">$ {{ $payments }} MXN
                             <br /></p>
-                        @endforeach
                         
                         <a href="#" class="btn btn-success font-weight-bold py-2 px-6">Más información</a>
                     </div>
