@@ -24,3 +24,4 @@ Route::resource('wallets', 'WalletsController')->name('*','wallets');
 Route::resource('incomes', 'IncomesController')->name('*','incomes');
 Route::resource('expenses', 'ExpensesController')->name('*','expenses');
 Route::resource('loans', 'LoansController')->name('*','loans');
+Route::resource('payments', 'PaymentsController')->name('*','payments');

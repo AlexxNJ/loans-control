@@ -44,7 +44,7 @@
                             <p class="text-inverse-danger my-6">$ {{ $payments }} MXN
                             <br /></p>
                         
-                        <a href="#" class="btn btn-success font-weight-bold py-2 px-6">Más información</a>
+                        <a href="{{ route('payments.index') }}" class="btn btn-success font-weight-bold py-2 px-6">Más información</a>
                     </div>
                 </div>
             </div>

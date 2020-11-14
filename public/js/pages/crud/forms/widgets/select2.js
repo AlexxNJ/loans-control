@@ -191,6 +191,16 @@ var KTSelect2 = function() {
                 allowClear: true
             });
         });
+        $('#createPayment, #editPayment').on('shown.bs.modal', function () {
+            $('#select_customer').select2({
+                placeholder: "Selecciona un cliente",
+                allowClear: true
+            });
+            $('#edit_select_customer').select2({
+                placeholder: "Selecciona un cliente",
+                allowClear: true
+            });
+        })
     }
 
     // Public functions

@@ -38,6 +38,12 @@ var KTBootstrapDatepicker = function () {
             orientation: "bottom left",
             templates: arrows
         });
+        $('#datepicker_edit_payment').datepicker({
+            rtl: KTUtil.isRTL(),
+            todayHighlight: true,
+            orientation: "bottom left",
+            templates: arrows
+        });
         $('#c_datepicker').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
