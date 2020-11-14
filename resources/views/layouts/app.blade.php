@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->
-			<a href="index.html">
+			<a href="{{ route('home') }}">
 				<img alt="Logo" src="{{ asset('media/logos/logo-light.png') }}" />
 			</a>
 			<!--end::Logo-->
@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Brand-->
 					<div class="brand flex-column-auto" id="kt_brand">
 						<!--begin::Logo-->
-						<a href="index.html" class="brand-logo">
+						<a href="{{ route('home') }}" class="brand-logo">
 							<img alt="Logo" src="{{ asset('media/logos/logo-light.png') }}" />
 						</a>
 						<!--end::Logo-->
