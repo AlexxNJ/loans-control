@@ -74,6 +74,10 @@ class DatabaseSeeder extends Seeder
             'name'=>'Mamá',
             'user_id'=>1
         ]);
+        Customer::create([
+            'name'=>'Miguel',
+            'user_id'=>1
+        ]);
 
         Loan::create([
             'amount'=>4000,
@@ -224,8 +228,28 @@ class DatabaseSeeder extends Seeder
             'customer_id'=>10,
             'user_id'=>1
         ]);
+        Loan::create([
+            'amount'=>1800,
+            'interest_percentage'=>0.10,
+            'date'=>'2020-11-03',
+            'scheme'=>'N/A',
+            'type_of_loan'=>'intereses',
+            'status'=>'activo',
+            'customer_id'=>10,
+            'user_id'=>1
+        ]);
+        Loan::create([
+            'amount'=>500,
+            'interest_percentage'=>0.10,
+            'date'=>'2020-11-03',
+            'scheme'=>'N/A',
+            'type_of_loan'=>'intereses',
+            'status'=>'activo',
+            'customer_id'=>11,
+            'user_id'=>1
+        ]);
 
-        Payment::create(['date'=>'2020-09-15','amount'=>2500,'user_id'=>1, 'status'=> 'en-tiempo']);
+        PAYMENT::create(['date'=>'2020-09-15','amount'=>2500,'user_id'=>1, 'status'=> 'en-tiempo']);
         PAYMENT::create(['date'=>'2020-09-15','amount'=>200,'user_id'=>1, 'status'=> 'en-tiempo']);
         PAYMENT::create(['date'=>'2020-09-16','amount'=>400,'user_id'=>1, 'status'=> 'en-tiempo']);
         PAYMENT::create(['date'=>'2020-09-17','amount'=>300,'user_id'=>1, 'status'=> 'en-tiempo']);
@@ -253,6 +277,10 @@ class DatabaseSeeder extends Seeder
         PAYMENT::create(['date'=>'2020-11-02','amount'=>1000,'user_id'=>1, 'status'=> 'en-tiempo']);
         PAYMENT::create(['date'=>'2020-11-03','amount'=>300,'user_id'=>1, 'status'=> 'en-tiempo']);
         PAYMENT::create(['date'=>'2020-11-05','amount'=>500,'user_id'=>1, 'status'=> 'en-tiempo']);
+        PAYMENT::create(['date'=>'2020-11-09','amount'=>500,'user_id'=>1, 'status'=> 'en-tiempo']);
+        PAYMENT::create(['date'=>'2020-11-16','amount'=>500,'user_id'=>1, 'status'=> 'en-tiempo']);
+        PAYMENT::create(['date'=>'2020-11-14','amount'=>250,'user_id'=>1, 'status'=> 'en-tiempo']);
+        PAYMENT::create(['date'=>'2020-11-17','amount'=>500,'user_id'=>1, 'status'=> 'en-tiempo']);
 
 
 
@@ -277,7 +305,7 @@ class DatabaseSeeder extends Seeder
         
         Expense::create([
             'date'=>'2020-11-06',
-            'amount'=>4058,
+            'amount'=>4170,
             'description'=>'Total salidas',
             'user_id'=>1
         ]);

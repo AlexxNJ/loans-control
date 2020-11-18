@@ -17,7 +17,7 @@ class CreateExpensesTable extends Migration
             $table->increments('id');
             $table->date('date');
             $table->double('amount',8,2);
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->softDeletes();
