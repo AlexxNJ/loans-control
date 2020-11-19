@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    let table = $('.table-loans');
+    table.DataTable({
+        "lengthMenu":[[5,10,25,50,100],[5,10,25,50,100]],
+        crollY: '50vh',
+        scrollX: true,
+        scrollCollapse: true
+    })
+})
 $('.btn-create-loan').click(function(){
     let available_wallet = parseFloat($('#available_wallet').html())
     let available_interests = parseFloat($('#available_interests').html())

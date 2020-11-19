@@ -1,6 +1,6 @@
 "use strict";
 var KTDatatablesBasicScrollable = function() {
-
+ 
     var initTable1 = function() {
         var table = $('#kt_datatable1');
 

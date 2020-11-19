@@ -13,7 +13,7 @@
     <div class="card-body">
         <table class="table mb-5 table-wallets">
             <input type="hidden" class="form-control" id="csrf_token_index" value="{{ csrf_token() }}"/>
-            <thead class="thead-dark">
+            <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Cantidad</th>

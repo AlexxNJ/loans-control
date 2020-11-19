@@ -32,6 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{ asset('plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<link href="{{ asset('css/themes/layout/header/base/light.css')}}" rel="stylesheet" type="text/css" />
@@ -1403,6 +1404,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="{{ asset('plugins/global/plugins.bundle.js')}}"></script>
 		<script src="{{ asset('plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
 		<script src="{{ asset('js/scripts.bundle.js')}}"></script>
+		<script src="{{ asset('plugins/custom/datatables/datatables.bundle.js') }}"></script>
 		<!--end::Global Theme Bundle-->
 		<!--begin::Page Vendors(used by this page)-->
 		<script src="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>

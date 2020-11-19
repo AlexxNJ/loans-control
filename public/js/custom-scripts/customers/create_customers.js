@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    let table = $('.table-customers');
+    table.DataTable({
+        "lengthMenu":[[5,10,25,50,100],[5,10,25,50,100]],
+        crollY: '50vh',
+        scrollX: true,
+        scrollCollapse: true
+    })
+})
 $(".crearUsuario").click(function(){
     $('.div-alert').empty()
     let name = $('#c_name').val()
