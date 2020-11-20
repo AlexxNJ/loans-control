@@ -32,20 +32,54 @@ class HomeController extends Controller
     {   
         $user_id = auth()->user()->id;
         $user = auth()->user();
+
+        //Billetera del usuario logeado
         $wallets = Wallet::where('user_id',$user_id)->get();
 
-       $loans = Loan::where('user_id',$user_id)
+        //Presamos del usuario logeado
+        $loans = Loan::where('user_id',$user_id)
                     ->where('status','activo')
                     ->sum('amount');
 
-       $payments = Payment::where('user_id',$user_id)->sum('amount');
+        //Prestamos de tipo billetera
+        $loans_of_wallets = Loan::where('user_id',$user_id)
+        ->where('status','activo')
+        ->where('type_of_loan','billetera')
+        ->sum('amount');
+
+        //Prestamos de tipo interes
+        $loans_of_interests = Loan::where('user_id',$user_id)
+        ->where('status','activo')
+        ->where('type_of_loan','intereses')
+        ->sum('amount');
+
+        //Pagos de los clientes del usuario logeado
+        $payments = Payment::where('user_id',$user_id)->sum('amount');
 
         $totalCustomers = Customer::where('user_id',$user_id)->count();
 
         $expenses = Expense::where('user_id',$user_id)->sum('amount');
 
         $incomes = Income::where('user_id',$user_id)->sum('amount');
+
+        //Proceso para obtener los intereses disponibles (dinero en mano)
+        $sum_loans_interests = Loan::where('user_id',$user_id)
+                        ->where('type_of_loan','intereses')
+                        ->where('status','activo')
+                        ->sum('amount');
+                        
+        $interests = Payment::where('user_id',$user_id)->sum('amount');
+
+        $sum_incomes = Income::where('user_id',$user_id)->sum('amount');
+
+        $sum_expenses = Expense::where('user_id',$user_id)->sum('amount');
+
+        $in_vs_ex =  $sum_expenses - $sum_incomes;
+
+        $sub_interests = $interests - $sum_loans_interests;
+
+        $available_interests = $sub_interests - $in_vs_ex;
         
-        return view('home',compact('wallets','loans','payments','totalCustomers','expenses','incomes'));
+        return view('home',compact('wallets','loans','payments','totalCustomers','expenses','incomes','loans_of_wallets','loans_of_interests','available_interests'));
     }
 }
